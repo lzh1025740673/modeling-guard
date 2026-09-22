@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "title": "Synthetic metric check / 合成数据验收演示",
+  "stage": "software-acceptance-demo",
+  "command": ["{python}", "experiment.py"],
+  "files": ["experiment.py", "data.csv"],
+  "outputs": ["metrics.json"],
+  "timeout_seconds": 10,
+  "max_log_bytes": 65536,
+  "max_runs": 2,
+  "metric": {
+    "file": "metrics.json",
+    "name": "mae",
+    "direction": "min",
+    "baseline": 2.0
+  }
+}
