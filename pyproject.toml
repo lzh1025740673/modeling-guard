@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modeling-guard"
+version = "0.1.0"
+description = "Offline approval receipts and bounded experiment runs for teacher-guided modeling teams"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "lzh1025740673"}]
+dependencies = []
+classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent", "Topic :: Scientific/Engineering", "Topic :: Education"]
+
+[project.scripts]
+modeling-guard = "modeling_guard.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/lzh1025740673/modeling-guard"
+Issues = "https://github.com/lzh1025740673/modeling-guard/issues"
+
+[tool.setuptools.packages.find]
+include = ["modeling_guard*"]
+
+[tool.setuptools.package-data]
+modeling_guard = ["demo/*.json", "demo/*.py", "demo/*.csv", "demo/*.md"]
