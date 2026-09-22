@@ -1,5 +1,7 @@
 # Modeling Guard
 
+[![tests](https://github.com/lzh1025740673/modeling-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/lzh1025740673/modeling-guard/actions/workflows/ci.yml)
+
 **Teacher-approved experiments. Bounded runs. Inspectable evidence.**
 
 [中文说明](README.zh-CN.md) · [60-second demo](docs/DEMO.md) · [Contract reference](docs/CONTRACT.md) · [Limitations](SECURITY.md) · [Contribute](CONTRIBUTING.md)
@@ -81,7 +83,7 @@ python scripts/build_zip.py
 
 Optional installation from source: `python -m pip install .` (the build may fetch setuptools; the runtime has no dependencies). Then use `modeling-guard` as the CLI command. No PyPI publication is claimed.
 
-GitHub Actions is configured for Windows, Linux and macOS on Python 3.10/3.12. A configured matrix is not evidence that CI has run: check the repository's actual Actions results. The local acceptance record is in [docs/VALIDATION.md](docs/VALIDATION.md).
+The 25 workflow tests and source ZIP build passed on Windows, Linux and macOS using Python 3.10 and 3.12 in [GitHub Actions](https://github.com/lzh1025740673/modeling-guard/actions/runs/35683858438). See [docs/VALIDATION.md](docs/VALIDATION.md) for the acceptance record and its limits. The badge links to the current workflow status.
 
 ## Project status
 

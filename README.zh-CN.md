@@ -50,6 +50,8 @@ macOS/Linux 使用 `python3` 替换 `py -3`。命令最后会显示 `report.html
 
 ## 项目现状与参与
 
+GitHub 自动测试已在 Windows、Linux、macOS 的 Python 3.10／3.12 六个组合全部通过，包含 25 项工作流测试和源码 ZIP 构建。查看 [实际测试记录](https://github.com/lzh1025740673/modeling-guard/actions/runs/35683858438)。
+
 这是 v0.1.0 初版，欢迎教师和学生提交真实的安装问题、失败日志的脱敏片段、验收规则建议和测试。不要上传正式赛题保密材料、学生个人信息、API Key 或完整私有运行目录。
 
 测试与已知边界见 [VALIDATION.md](docs/VALIDATION.md) 和 [SECURITY.md](SECURITY.md)。本项目为独立开源项目，非 OpenAI 官方项目，不承诺竞赛成绩、社区热度或活动奖励。原创代码和文档使用 MIT 许可，外部软件保留各自条款。
