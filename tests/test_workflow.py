@@ -16,7 +16,9 @@ class WorkflowTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix="guard test 中文 ")
         self.addCleanup(self.temp.cleanup)
-        self.project = init(Path(self.temp.name) / "new project")
+        # macOS exposes its temporary directory through /var -> /private/var.
+        # Use the actual directory so the tests respect the no-symlink policy.
+        self.project = init(Path(self.temp.name).resolve() / "new project")
 
     def edit_spec(self, **changes):
         path = self.project / "experiment.json"
