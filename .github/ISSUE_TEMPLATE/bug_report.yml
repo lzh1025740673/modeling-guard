@@ -1,0 +1,22 @@
+name: Bug report / 问题报告
+description: Report a reproducible installation or experiment-workflow problem
+body:
+  - type: markdown
+    attributes:
+      value: Use synthetic data and redact private paths, credentials, and student information.
+  - type: input
+    id: environment
+    attributes:
+      label: OS and Python version
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps, expected behavior, and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Minimal redacted output or synthetic example
