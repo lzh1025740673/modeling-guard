@@ -32,6 +32,8 @@ This is a format example, not included research data or an implemented baseline.
 
 Paths use relative forward slashes, with no traversal, symlink, junction, drive prefix, Windows device names, case-only duplicates, or overlapping input/output paths. Script arguments are literal strings; script behavior remains the teacher's responsibility.
 
+Project ancestors must also be real directories. On macOS, paths below `/var` or `/tmp` may use system symlinks; use the canonical path (for example `/private/var/...`) or create the project under your home directory. The test fixture resolves its temporary parent before creating a project.
+
 The teacher supplies a meaningful baseline threshold. The runner does not compute an independent baseline or verify that the script calculated its metric honestly. Save additional metrics/plots as declared output files, but only the selected metric controls the v0.1.0 gate.
 
 ## Approval and state
