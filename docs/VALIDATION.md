@@ -14,9 +14,14 @@ Date: 2026-09-22. Release candidate: 0.1.0.
 
 Tests cover unapproved/stale approval refusal, no-overwrite initialization, input snapshot preservation, failed-run retry blocking, run budget, timeout, normal child-process cleanup, bounded logs, output/metric failures, malformed contract/receipt, path restrictions, concurrent-operation lock, HTML escaping, and exclusion of an inherited test secret from the child environment.
 
+## Executed on GitHub Actions
+
+- [Run 35683858438](https://github.com/lzh1025740673/modeling-guard/actions/runs/35683858438), commit `6dfe5966357d6d4ebf65b58254fed050879e475d`: all six Windows/Linux/macOS × Python 3.10/3.12 jobs passed the 25-test suite and ZIP build.
+- The first CI run exposed a test-fixture path issue on macOS: `/var` is a system symlink. The fixture now resolves its temporary parent to the actual directory. The runner's no-symlink policy remains unchanged.
+- The CI actions were updated to the official v7 releases; checkout does not persist Git credentials.
+
 ## Not established by these checks
 
-- macOS/Linux execution until the configured CI jobs actually pass.
 - Scientific correctness, absence of information leakage, full environment reproducibility, token savings, or improved competition performance.
 - Authenticated teacher identity, hostile-code isolation, detached-process containment, CPU/RAM/GPU or financial quotas.
 - Live product-specific acceptance of the new runner in Codex, Cursor, Claude Code or other assistants.
